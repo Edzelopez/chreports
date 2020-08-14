@@ -93,8 +93,8 @@ class CRM_Chreports_Upgrader extends CRM_Chreports_Upgrader_Base {
    * @return TRUE on success
    * @throws Exception
    */
-  public function upgrade_1300() {
-    $this->ctx->log->info('Applying update 1300: Update reports to used correct formvalues');
+  public function upgrade_1200() {
+    $this->ctx->log->info('Applying update 1200: Update reports to used correct formvalues');
     $report = civicrm_api3('ReportInstance', 'get', ['name' => 'LYBNT']);
     if (!empty($report['values'])) {
       foreach ($report['values'] as $r) {
@@ -126,8 +126,8 @@ class CRM_Chreports_Upgrader extends CRM_Chreports_Upgrader_Base {
    * @return TRUE on success
    * @throws Exception
    */
-  public function upgrade_1400() {
-    $this->ctx->log->info('Applying update 1400: Update LYBNT report to used correct instance');
+  public function upgrade_1300() {
+    $this->ctx->log->info('Applying update 1300: Update LYBNT report to used correct instance');
     $report = civicrm_api3('ReportInstance', 'get', ['name' => 'LYBNT']);
     if (!empty($report['values'])) {
       foreach ($report['values'] as $r) {
